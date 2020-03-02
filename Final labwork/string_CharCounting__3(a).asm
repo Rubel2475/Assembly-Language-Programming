@@ -63,8 +63,7 @@ org 100h
                 JMP LOOP1
            otherAll:
                 INC OT
-                JMP LOOP1
-                
+                JMP LOOP1           
                  
            inner:
                 CMP AL,'Z'
@@ -73,6 +72,9 @@ org 100h
                 CMP AL,'a'
                 JGE letter 
                 
+                INC OT
+                JMP LOOP1
+     
            letter:
                 CMP AL,'A'
                 JE vowel
